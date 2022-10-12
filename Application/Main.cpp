@@ -3,15 +3,15 @@
 
 float points[] = {
 	-0.5f,  -0.5f,  0.0f,
-   0.0f,  0.0f,  0.0f,
-    0.0f, -0.5f,  0.0f,
+     0.0f,   0.0f,  0.0f,
+     0.0f,  -0.5f,  0.0f,
     
-	-0.5f, 0.0f, 0.0f,
-	0.0f, 0.0f, 0.0f,
-	-0.5f, -0.5f, 0.0f
+	-0.5f,  0.0f,   0.0f,
+	 0.0f,  0.0f,   0.0f,
+	-0.5f, -0.5f,   0.0f
 };
 
-neu::Vector3 colors[] = {
+glm::vec3 colors[] = {
 	{ 0, 0, 1 },
 	{ 1, 0, 1 },
 	{ 0, 1, 0 },
@@ -39,7 +39,7 @@ int main(int argc, char** argv)
 	GLuint cvbo = 0;
 	glGenBuffers(1, &cvbo);
 	glBindBuffer(GL_ARRAY_BUFFER, cvbo);
-	glBufferData(GL_ARRAY_BUFFER, 6 * sizeof(neu::Vector3), colors, GL_STATIC_DRAW);
+	glBufferData(GL_ARRAY_BUFFER, 6 * sizeof(glm::vec3), colors, GL_STATIC_DRAW);
 
 	// create vertex array
 	GLuint vao = 0;
@@ -72,6 +72,15 @@ int main(int argc, char** argv)
 	glLinkProgram(program);
 	glUseProgram(program);
 
+	GLint uniform1 = glGetUniformLocation(program, "scale");
+	GLint uniform2 = glGetUniformLocation(program, "tint");
+	GLint uniform3 = glGetUniformLocation(program, "transform");
+	
+	glUniform3f(uniform2, 1, 1, 1);
+
+	glm::mat4 mx{ 1 };
+
+
 	float angle = 0;
 	neu::Vector2 position;
 
@@ -81,6 +90,10 @@ int main(int argc, char** argv)
 		neu::Engine::Instance().Update();
 
 		if (neu::g_inputSystem.GetKeyState(neu::key_escape) == neu::InputSystem::KeyState::Pressed) quit = true;
+
+		glUniform1f(uniform1,std::sin(neu::g_time.time) * 3);
+		mx = glm::eulerAngleXYX(neu::g_time.time, neu::g_time.time, neu::g_time.time * 10);
+		glUniformMatrix4fv(uniform3, 1, GL_FALSE, glm::value_ptr(mx));
 
 		neu::g_renderer.BeginFrame();
 
