@@ -20,22 +20,6 @@ neu::Vector3 colors[] = {
 	{ 1, 1, 1 }
 };
 
-const char* vertex_shader =
-"#version 430 core\n"
-"in vec3 position;"
-"void main() {"
-"  gl_Position = vec4(position * 1, 1.0);"
-"}";
-
-
-
-const char* fragment_shader =
-"#version 430 core\n"
-"out vec4 color;"
-"void main() {"
-"  color = vec4(1.0, 1.0, 2.0, 1.0);"
-"}";
-
 int main(int argc, char** argv)
 {
 	neu::InitializeMemory();
