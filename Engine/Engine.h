@@ -9,6 +9,7 @@
 
 #include "Math/MathUtils.h"
 #include "Math/Random.h"
+#include "glm/glm.hpp"
 
 #include "Framework/Scene.h"
 #include "Framework/Game.h"
