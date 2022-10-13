@@ -95,8 +95,8 @@ int main(int argc, char** argv)
 		mx = glm::eulerAngleXYX(neu::g_time.time, neu::g_time.time, neu::g_time.time * 10);
 		glUniformMatrix4fv(uniform3, 1, GL_FALSE, glm::value_ptr(mx));
 
-		neu::g_renderer.BeginFrame();
 
+		neu::g_renderer.BeginFrame();
 		glDrawArrays(GL_TRIANGLES, 0, 6);
 
 		neu::g_renderer.EndFrame();
