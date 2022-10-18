@@ -1,5 +1,6 @@
 #include "Engine.h" 
 #include <iostream> 
+#include <Renderer/Program.cpp>
 
 float points[] = {
 	-0.5f,  -0.5f,  0.0f,
@@ -75,28 +76,10 @@ int main(int argc, char** argv)
 	glBindBuffer(GL_ARRAY_BUFFER, tvbo);
 	glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, 0, NULL);
 
-	// create shader
-	std::shared_ptr<neu::Shader> vs = neu::g_resources.Get<neu::Shader>("Shaders/basic.vert", GL_VERTEX_SHADER);
-	std::shared_ptr<neu::Shader> fs = neu::g_resources.Get<neu::Shader>("Shaders/basic.frag", GL_FRAGMENT_SHADER);
-
-	// create program
-	GLuint program = glCreateProgram();
-	glAttachShader(program, fs->m_shader);
-	glAttachShader(program, vs->m_shader);
-	glLinkProgram(program);
-	glUseProgram(program);
-
-	// create texture
-	std::shared_ptr<neu::Texture> texture1 = neu::g_resources.Get<neu::Texture>("Textures/llama.jpg");
-	std::shared_ptr<neu::Texture> texture2 = neu::g_resources.Get<neu::Texture>("Textures/wood.png");
-	texture1->Bind();
-	//texture2->Bind();
-
-	GLint uniform1 = glGetUniformLocation(program, "scale");
-	GLint uniform2 = glGetUniformLocation(program, "tint");
-	GLint uniform3 = glGetUniformLocation(program, "transform");
-	
-	glUniform3f(uniform2, 1, 1, 1);
+	// create material 
+	std::shared_ptr<neu::Material> material = neu::g_resources.Get<neu::Material>("Materials/Box.mtrl");
+	material->Link();
+	material->Bind();
 
 	glm::mat4 mx{ 1 };
 
@@ -111,9 +94,10 @@ int main(int argc, char** argv)
 
 		if (neu::g_inputSystem.GetKeyState(neu::key_escape) == neu::InputSystem::KeyState::Pressed) quit = true;
 
-		glUniform1f(uniform1,std::sin(neu::g_time.time) * 3);
-		mx = glm::eulerAngleXYX(neu::g_time.time, neu::g_time.time, neu::g_time.time * 10);
-		glUniformMatrix4fv(uniform3, 1, GL_FALSE, glm::value_ptr(mx));
+		material->GetProgram()->SetUniform("tint", glm::vec3{ 1, 0, 0 });
+		material->GetProgram()->SetUniform("scale", 0.5f);
+		material->GetProgram()->SetUniform("scale", std::sin(neu::g_time.time * 3));
+		material->GetProgram()->SetUniform("transform", mx);
 
 
 		neu::g_renderer.BeginFrame();
