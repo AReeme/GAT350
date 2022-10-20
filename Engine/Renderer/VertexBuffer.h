@@ -17,6 +17,9 @@ namespace neu
 		void CreateVertexBuffer(GLsizei size, GLsizei m_vertexCount, void* data);
 		void SetAttribute(int index, GLint size, GLsizei stride, size_t offset);
 
+		// Index Buffer
+		void CreateIndexBuffer(GLenum indexType, GLsizei count, void* data);
+
 		virtual void Draw(GLenum primitiveType = GL_TRIANGLES);
 
 		void Bind() { glBindVertexArray(m_vao); }
@@ -26,5 +29,9 @@ namespace neu
 
 		GLuint m_vbo = 0; // vertex buffer object
 		GLuint m_vertexCount = 0; // number of vertices in vertex buffer
+
+		GLuint m_ibo = 0; // Index Buffer Object
+		GLuint m_indexCount = 0; // Number of Indecies index buffer
+		GLenum m_indexType = 0; // Data Type Of Index
 	};
 }
