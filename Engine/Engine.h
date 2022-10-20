@@ -43,6 +43,7 @@
 #include "Renderer/Shader.h"
 #include "Renderer/Program.h"
 #include "Renderer/Material.h"
+#include "Renderer/VertexBuffer.h"
 
 #include <memory>
 #include <vector>
