@@ -148,6 +148,9 @@
     <None Include="..\Build\Assets\Shaders\basic.prog" />
     <None Include="..\Build\Assets\Shaders\basic.vert" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Main.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

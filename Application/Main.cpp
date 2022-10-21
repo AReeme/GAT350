@@ -78,7 +78,7 @@ int main(int argc, char** argv)
 	float speed = 10;
 
 	std::vector<neu::Transform> transforms;
-	for (size_t i = 0; i < 10; i++)
+	for (size_t i = 0; i < 5000; i++)
 	{
 		transforms.push_back({ {  neu::randomf(-10, 10), neu::randomf(-10, 10),  neu::randomf(-10, 10)}, {neu::randomf(360), 90,  0} });
 	}
