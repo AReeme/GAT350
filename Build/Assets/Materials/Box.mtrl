@@ -1,20 +1,20 @@
-{ 
-    "program":"shaders/basic.prog", 
-    "texture":"textures/wood.png", 
-    "ambient":[ 
-        1.0,
-        1.0,
-        1.0 
-    ], 
-    "diffuse":[ 
-        1.0, 
-        1.0, 
-        1.0 
-    ], 
-    "specular":[ 
-        1.0, 
-        1.0, 
-        1.0 
-    ], 
-    "shininess":100 
+{
+  "program": "shaders/basic.prog",
+  "texture": "textures/ogre_diffuse.bmp",
+  "ambient": [
+    1.0,
+    1.0,
+    1.0
+  ],
+  "diffuse": [
+    1.0,
+    1.0,
+    1.0
+  ],
+  "specular": [
+    1.0,
+    1.0,
+    1.0
+  ],
+  "shininess": 100
 } 

@@ -12,7 +12,7 @@ namespace neu
 
 	void ModelComponent::Draw(Renderer& renderer)
 	{
-		m_model->Draw(renderer, m_owner->m_transform);
+		/*m_model->Draw(renderer, m_owner->m_transform);*/
 	}
 
 	bool ModelComponent::Write(const rapidjson::Value& value) const

@@ -86,7 +86,7 @@
       <AdditionalDependencies>assimp-vc143-mtd.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <Lib>
-      <AdditionalDependencies>SDL2.lib; SDL2main.lib; SDL2_ttf.lib; SDL2_image.lib; fmod_vc.lib; box2d.lib</AdditionalDependencies>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_ttf.lib;SDL2_image.lib;fmod_vc.lib;box2d.lib;assimp-vc143-mtd.lib</AdditionalDependencies>
     </Lib>
     <Lib>
       <AdditionalLibraryDirectories>$(SolutionDir)ThirdParty\SDL2-2.0.22\lib\$(PlatformTarget);$(SolutionDir)ThirdParty\fmod\core\lib\$(PlatformTarget);$(SolutionDir)ThirdParty\box2d\lib;$(SolutionDir)ThirdParty\assimp\lib\$(Configuration)</AdditionalLibraryDirectories>
@@ -115,7 +115,7 @@
       <AdditionalDependencies>assimp-vc143-mtd.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <Lib>
-      <AdditionalDependencies>SDL2.lib; SDL2main.lib; SDL2_ttf.lib; SDL2_image.lib; fmod_vc.lib; box2d.lib</AdditionalDependencies>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_ttf.lib;SDL2_image.lib;fmod_vc.lib;box2d.lib;assimp-vc143-mtd.lib</AdditionalDependencies>
     </Lib>
     <Lib>
       <AdditionalLibraryDirectories>$(SolutionDir)ThirdParty\SDL2-2.0.22\lib\$(PlatformTarget);$(SolutionDir)ThirdParty\fmod\core\lib\$(PlatformTarget);$(SolutionDir)ThirdParty\box2d\lib;$(SolutionDir)ThirdParty\assimp\lib\$(Configuration)</AdditionalLibraryDirectories>
@@ -140,7 +140,7 @@
       <AdditionalDependencies>assimp-vc143-mtd.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <Lib>
-      <AdditionalDependencies>SDL2.lib; SDL2main.lib; SDL2_ttf.lib; SDL2_image.lib; fmod_vc.lib; box2d.lib</AdditionalDependencies>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_ttf.lib;SDL2_image.lib;fmod_vc.lib;box2d.lib;assimp-vc143-mtd.lib</AdditionalDependencies>
     </Lib>
     <Lib>
       <AdditionalLibraryDirectories>$(SolutionDir)ThirdParty\SDL2-2.0.22\lib\$(PlatformTarget);$(SolutionDir)ThirdParty\fmod\core\lib\$(PlatformTarget);$(SolutionDir)ThirdParty\box2d\lib;$(SolutionDir)ThirdParty\assimp\lib\$(Configuration)</AdditionalLibraryDirectories>
@@ -169,7 +169,7 @@
       <AdditionalDependencies>assimp-vc143-mtd.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <Lib>
-      <AdditionalDependencies>SDL2.lib; SDL2main.lib; SDL2_ttf.lib; SDL2_image.lib; fmod_vc.lib; box2d.lib</AdditionalDependencies>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_ttf.lib;SDL2_image.lib;fmod_vc.lib;box2d.lib;assimp-vc143-mtd.lib</AdditionalDependencies>
     </Lib>
     <Lib>
       <AdditionalLibraryDirectories>$(SolutionDir)ThirdParty\SDL2-2.0.22\lib\$(PlatformTarget);$(SolutionDir)ThirdParty\fmod\core\lib\$(PlatformTarget);$(SolutionDir)ThirdParty\box2d\lib;$(SolutionDir)ThirdParty\assimp\lib\$(Configuration)</AdditionalLibraryDirectories>
