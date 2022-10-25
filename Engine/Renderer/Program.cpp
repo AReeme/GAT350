@@ -46,6 +46,8 @@ namespace neu
 			AddShader(fshader);
 		}
 
+		Link();
+
 		return true;
 	}
 	void Program::AddShader(const std::shared_ptr<Shader>& shader)
