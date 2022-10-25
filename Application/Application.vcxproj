@@ -144,6 +144,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="..\Build\Assets\Materials\Box.mtrl" />
+    <None Include="..\Build\Assets\Scenes\basic.scn" />
     <None Include="..\Build\Assets\Shaders\basic.frag" />
     <None Include="..\Build\Assets\Shaders\basic.prog" />
     <None Include="..\Build\Assets\Shaders\basic.vert" />
