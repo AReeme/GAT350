@@ -60,13 +60,19 @@ int main(int argc, char** argv)
 	LOG("Window Created...");
 
 	// load scene 
-	auto scene = neu::g_resources.Get<neu::Scene>("scenes/basic.scn");
+	auto scene = neu::g_resources.Get<neu::Scene>("scenes/basic_lit.scn");
 
 	bool quit = false;
 	while (!quit)
 	{
 		neu::Engine::Instance().Update();
 		if (neu::g_inputSystem.GetKeyState(neu::key_escape) == neu::InputSystem::KeyState::Pressed) quit = true;
+
+		auto actor = scene->GetActorFromName("Ogre");
+		if (actor)
+		{
+			actor->m_transform.rotation.y += neu::g_time.deltaTime * 90.0f;
+		}
 
 		scene->Update();
 

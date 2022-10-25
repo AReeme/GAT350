@@ -31,6 +31,7 @@
 #include "Components/CharacterComponent.h"
 #include "Components/CameraComponent.h"
 #include "Components/CameraController.h"
+#include "Components/LightComponent.h"
 
 #include "Input/InputSystem.h"
 #include "Audio/AudioSystem.h"
