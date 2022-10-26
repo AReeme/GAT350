@@ -19,9 +19,7 @@ namespace neu
 		std::shared_ptr<Program> GetProgram() { return m_program; }
 
 	public:
-		glm::vec3 ambient;
-		glm::vec3 diffuse;
-		glm::vec3 specular;
+		glm::vec3 color;
 		float shininess = 0;
 
 	private:
