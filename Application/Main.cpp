@@ -56,7 +56,7 @@ int main(int argc, char** argv)
 	neu::Engine::Instance().Register();
 	LOG("Engine Initialized...");
 
-	neu::g_renderer.CreateWindow("Neumont", 800, 600);
+	neu::g_renderer.CreateWindow("Neumont", 1000, 600);
 	LOG("Window Created...");
 
 	// load scene 
