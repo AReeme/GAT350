@@ -53,6 +53,9 @@
     <None Include="..\Build\Assets\Materials\Floor.mtrl">
       <Filter>Resource Files</Filter>
     </None>
+    <None Include="..\Build\Assets\Materials\Background.mtrl">
+      <Filter>Resource Files</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Main.h">

@@ -143,6 +143,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\Build\Assets\Materials\Background.mtrl" />
     <None Include="..\Build\Assets\Materials\Box.mtrl" />
     <None Include="..\Build\Assets\Materials\Floor.mtrl" />
     <None Include="..\Build\Assets\Materials\Tree.mtrl" />

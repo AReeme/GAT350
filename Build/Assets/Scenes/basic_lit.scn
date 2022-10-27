@@ -86,6 +86,34 @@
     },
     {
       "type": "Actor",
+      "name": "BG",
+      "transform": {
+        "position": [
+          0,
+          0,
+          25
+        ],
+        "scale": [
+          50,
+          50,
+          50
+        ],
+        "rotation": [
+          90,
+          0,
+          0
+        ]
+      },
+      "components": [
+        {
+          "type": "ModelComponent",
+          "model_name": "Models/plane.obj",
+          "material_name": "Materials/Background.mtrl"
+        }
+      ]
+    },
+    {
+      "type": "Actor",
       "name": "Light",
       "transform": {
         "position": [

@@ -85,6 +85,7 @@ int main(int argc, char** argv)
 		{
 			actor3->m_transform.rotation.z += neu::g_time.deltaTime * 20.0f;
 		}
+		auto actor4 = scene->GetActorFromName("BG");
 		
 
 		scene->Update();
