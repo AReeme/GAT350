@@ -47,6 +47,12 @@
     <None Include="..\Build\Assets\Scenes\basic_lit.scn">
       <Filter>Resource Files</Filter>
     </None>
+    <None Include="..\Build\Assets\Materials\Tree.mtrl">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Build\Assets\Materials\Floor.mtrl">
+      <Filter>Resource Files</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Main.h">

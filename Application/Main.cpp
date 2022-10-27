@@ -68,11 +68,24 @@ int main(int argc, char** argv)
 		neu::Engine::Instance().Update();
 		if (neu::g_inputSystem.GetKeyState(neu::key_escape) == neu::InputSystem::KeyState::Pressed) quit = true;
 
-		auto actor = scene->GetActorFromName("Ogre");
-		if (actor)
+		auto actor1 = scene->GetActorFromName("Spot");
+		if (actor1)
 		{
-			actor->m_transform.rotation.y += neu::g_time.deltaTime * 90.0f;
+			actor1->m_transform.rotation.y += neu::g_time.deltaTime * 90.0f;
 		}
+
+		auto actor2 = scene->GetActorFromName("Ogre");
+		if (actor2)
+		{
+			actor2->m_transform.rotation.y += neu::g_time.deltaTime * 90.0f;
+		}
+
+		auto actor3 = scene->GetActorFromName("Floor");
+		if (actor3)
+		{
+			actor3->m_transform.rotation.z += neu::g_time.deltaTime * 20.0f;
+		}
+		
 
 		scene->Update();
 
