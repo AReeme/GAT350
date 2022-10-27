@@ -40,6 +40,9 @@ namespace neu
 	void Material::Bind()
 	{
 		m_program->Use();
+		m_program->SetUniform("material.color", color);
+		m_program->SetUniform("material.shininess", shininess);
+
 		for (auto& texture : m_textures)
 		{
 			texture->Bind();

@@ -155,6 +155,9 @@
     <None Include="..\Build\Assets\Shaders\basic_lit.frag" />
     <None Include="..\Build\Assets\Shaders\basic_lit.prog" />
     <None Include="..\Build\Assets\Shaders\basic_lit.vert" />
+    <None Include="..\Build\Assets\Shaders\basic_phong.frag" />
+    <None Include="..\Build\Assets\Shaders\basic_phong.prog" />
+    <None Include="..\Build\Assets\Shaders\basic_phong.vert" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Main.h" />

@@ -2,7 +2,6 @@
 #include <iostream> 
 #include <Renderer/Program.cpp>
 
-
 int main(int argc, char** argv)
 {
 	LOG("Application Started...");
