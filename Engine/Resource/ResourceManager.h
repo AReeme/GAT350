@@ -35,7 +35,7 @@ namespace neu
 		if (m_resources.find(name) != m_resources.end())
 		{
 			// found
-			return std::dynamic_pointer_cast<T>(m_resources[name]);
+			return std::dynamic_pointer_cast<T>(m_resources[lowerName]);
 
 			if (m_resources.find(lowerName) != m_resources.end())
 			{

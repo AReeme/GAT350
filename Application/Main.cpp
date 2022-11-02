@@ -24,17 +24,11 @@ int main(int argc, char** argv)
 		neu::Engine::Instance().Update();
 		if (neu::g_inputSystem.GetKeyState(neu::key_escape) == neu::InputSystem::KeyState::Pressed) quit = true;
 
-		auto actor1 = scene->GetActorFromName("Spot");
-		if (actor1)
-		/*{
-			actor1->m_transform.rotation.y += neu::g_time.deltaTime * 90.0f;
-		}*/
-
 		auto actor2 = scene->GetActorFromName("Ogre");
-		/*if (actor2)
+		if (actor2)
 		{
-			actor2->m_transform.rotation.y += neu::g_time.deltaTime * 90.0f;
-		}*/
+			actor2->m_transform.rotation.y += neu::g_time.deltaTime * 30.0f;
+		}
 		
 		auto material = neu::g_resources.Get<neu::Material>("Materials/Multi.mtrl");
 		if (material)

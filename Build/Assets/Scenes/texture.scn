@@ -5,54 +5,26 @@
       "name": "Ogre",
       "transform": {
         "position": [
-          1,
+          0,
           0,
           0
         ],
         "scale": [
-          6,
-          6,
+          1,
+          1,
           1
         ],
         "rotation": [
           0,
-          180,
-          180
+          0,
+          0
         ]
       },
       "components": [
         {
           "type": "ModelComponent",
-          "model_name": "Models/quad.obj",
+          "model_name": "Models/cube.obj",
           "material_name": "Materials/Multi.mtrl"
-        }
-      ]
-    },
-    {
-      "type": "Actor",
-      "name": "Spot",
-      "transform": {
-        "position": [
-          -1,
-          0,
-          0
-        ],
-        "scale": [
-          1,
-          1,
-          1
-        ],
-        "rotation": [
-          0,
-          0,
-          0
-        ]
-      },
-      "components": [
-        {
-          "type": "ModelComponent",
-          "model_name": "Models/spot.obj",
-          "material_name": "Materials/Tree.mtrl"
         }
       ]
     },
