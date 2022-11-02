@@ -16,7 +16,7 @@ int main(int argc, char** argv)
 	LOG("Window Created...");
 
 	// load scene 
-	auto scene = neu::g_resources.Get<neu::Scene>("scenes/basic_lit.scn");
+	auto scene = neu::g_resources.Get<neu::Scene>("scenes/texture.scn");
 
 	bool quit = false;
 	while (!quit)
@@ -26,23 +26,21 @@ int main(int argc, char** argv)
 
 		auto actor1 = scene->GetActorFromName("Spot");
 		if (actor1)
-		{
+		/*{
 			actor1->m_transform.rotation.y += neu::g_time.deltaTime * 90.0f;
-		}
+		}*/
 
 		auto actor2 = scene->GetActorFromName("Ogre");
-		if (actor2)
+		/*if (actor2)
 		{
 			actor2->m_transform.rotation.y += neu::g_time.deltaTime * 90.0f;
-		}
-
-		auto actor3 = scene->GetActorFromName("Floor");
-		if (actor3)
-		{
-			actor3->m_transform.rotation.z += neu::g_time.deltaTime * 20.0f;
-		}
-		auto actor4 = scene->GetActorFromName("BG");
+		}*/
 		
+		auto material = neu::g_resources.Get<neu::Material>("Materials/Multi.mtrl");
+		if (material)
+		{
+			//material->uv_offset += glm::vec2(neu::g_time.deltaTime);
+		}
 
 		scene->Update();
 
