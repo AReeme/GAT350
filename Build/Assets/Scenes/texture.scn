@@ -33,9 +33,9 @@
       "name": "Light",
       "transform": {
         "position": [
-          -2,
+          -3,
           0,
-          -2
+          -3
         ]
       },
       "components": [

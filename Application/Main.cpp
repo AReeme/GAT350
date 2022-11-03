@@ -27,7 +27,7 @@ int main(int argc, char** argv)
 		auto actor2 = scene->GetActorFromName("Ogre");
 		if (actor2)
 		{
-			actor2->m_transform.rotation.y += neu::g_time.deltaTime * 30.0f;
+			actor2->m_transform.rotation.y += neu::g_time.deltaTime * 60.0f;
 		}
 		
 		auto material = neu::g_resources.Get<neu::Material>("Materials/Multi.mtrl");
