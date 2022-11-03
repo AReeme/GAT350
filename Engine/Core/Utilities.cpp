@@ -27,7 +27,11 @@ namespace neu
 	{
 		// if string lengths don't match return false 
 		// returns false if string characters aren't equal
-
+		if (str1.length() != str2.length())
+		{
+			return false;
+		}
+		
 		return ((str1.size() == str2.size()) && std::equal(str1.begin(), str1.end(), str2.begin(), [](char& c1, char& c2) {
 			return (c1 == c2 || std::toupper(c1) == std::toupper(c2));
 			}));

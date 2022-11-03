@@ -23,8 +23,8 @@
       "components": [
         {
           "type": "ModelComponent",
-          "model_name": "Models/cube.obj",
-          "material_name": "Materials/Multi.mtrl"
+          "model_name": "Models/ogre.obj",
+          "material_name": "Materials/Box.mtrl"
         }
       ]
     },
@@ -56,7 +56,7 @@
         "position": [
           0,
           0,
-          -4
+          -3
         ]
       },
       "components": [

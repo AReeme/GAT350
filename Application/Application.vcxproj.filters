@@ -92,6 +92,15 @@
     <None Include="..\Build\Assets\Shaders\texture_phong.vert">
       <Filter>Assets\Shaders</Filter>
     </None>
+    <None Include="..\Build\Assets\Shaders\normal_phong.frag">
+      <Filter>Assets\Shaders</Filter>
+    </None>
+    <None Include="..\Build\Assets\Shaders\normal_phong.prog">
+      <Filter>Assets\Shaders</Filter>
+    </None>
+    <None Include="..\Build\Assets\Shaders\normal_phong.vert">
+      <Filter>Assets\Shaders</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Main.h">
