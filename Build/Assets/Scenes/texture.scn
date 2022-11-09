@@ -51,7 +51,7 @@
             1.0,
             1.0
           ],
-          "type_name": "point",
+          "type_name": "spot",
           "cutoff": 20.0,
           "exponent": 10.0
         }
