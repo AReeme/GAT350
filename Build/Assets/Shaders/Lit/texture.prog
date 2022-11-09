@@ -1,0 +1,4 @@
+{
+	"vertex_shader": "shaders/Lit/texture.vert",
+	"fragment_shader": "shaders/Lit/texture.frag"
+}

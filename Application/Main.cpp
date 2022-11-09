@@ -37,12 +37,6 @@ int main(int argc, char** argv)
 			//actor2->m_transform.rotation.y += neu::g_time.deltaTime * 60.0f;
 		}
 
-		auto material = neu::g_resources.Get<neu::Material>("Materials/Multi.mtrl");
-		if (material)
-		{
-			//material->uv_offset += glm::vec2(neu::g_time.deltaTime);
-		}
-
 		scene->Update();
 
 		neu::g_renderer.BeginFrame();

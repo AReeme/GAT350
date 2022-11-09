@@ -1,13 +1,13 @@
 {
-  "program": "shaders/normal_phong.prog",
+  "program": "shaders/FX/toon.prog",
   "textures": [
     "textures/texture_diffuse.png",
     "textures/texture_normal.png"
   ],
   "color": [
-    1,
-    1,
-    1
+    0.5,
+    0.25,
+    0
   ],
-  "shininess": 256
+  "shininess": 32
 } 

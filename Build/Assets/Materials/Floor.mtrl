@@ -1,5 +1,5 @@
 {
-  "program": "shaders/texture_phong.prog",
+  "program": "shaders/Lit/texture.prog",
   "texture": "textures/lava.png",
   "color": [
     1,
