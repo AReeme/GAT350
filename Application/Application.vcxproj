@@ -147,6 +147,7 @@
     <None Include="..\Build\Assets\Materials\Box.mtrl" />
     <None Include="..\Build\Assets\Materials\Floor.mtrl" />
     <None Include="..\Build\Assets\Materials\Multi.mtrl" />
+    <None Include="..\Build\Assets\Materials\Squirrel.mtrl" />
     <None Include="..\Build\Assets\Materials\Tree.mtrl" />
     <None Include="..\Build\Assets\Scenes\basic.scn" />
     <None Include="..\Build\Assets\Scenes\basic_lit.scn" />
