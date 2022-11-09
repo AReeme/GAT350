@@ -25,6 +25,15 @@
     <Filter Include="Assets\Shaders">
       <UniqueIdentifier>{4b6aa0cd-a613-4e4e-8f91-0bad0d22fa04}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Assets\Shaders\FX">
+      <UniqueIdentifier>{ae79abc2-34af-4fa9-a92d-7fb4e4a7d0cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\Shaders\Lit">
+      <UniqueIdentifier>{37f05ca1-2805-4e98-8be8-5acce250d8ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\Shaders\Unlit">
+      <UniqueIdentifier>{8f2ad4eb-51b6-4ab4-bfaa-e9935e4f5bc7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">

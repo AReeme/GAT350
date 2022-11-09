@@ -16,7 +16,7 @@
         ],
         "rotation": [
           0,
-          0,
+          180,
           0
         ]
       },
@@ -33,9 +33,14 @@
       "name": "Light",
       "transform": {
         "position": [
-          -3,
           0,
-          -3
+          3,
+          -1
+        ],
+        "rotation": [
+          85,
+          0,
+          0
         ]
       },
       "components": [
@@ -45,7 +50,10 @@
             1.0,
             1.0,
             1.0
-          ]
+          ],
+          "type_name": "directional",
+          "cutoff": 25.0,
+          "exponent": 10.0
         }
       ]
     },

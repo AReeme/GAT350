@@ -24,12 +24,19 @@ int main(int argc, char** argv)
 		neu::Engine::Instance().Update();
 		if (neu::g_inputSystem.GetKeyState(neu::key_escape) == neu::InputSystem::KeyState::Pressed) quit = true;
 
+		auto actor = scene->GetActorFromName("Light");
+		if (actor)
+		{
+			// move light using sin wave 
+			actor->m_transform.position.x = std::sin(neu::g_time.time) * 2;
+		}
+
 		auto actor2 = scene->GetActorFromName("Ogre");
 		if (actor2)
 		{
-			actor2->m_transform.rotation.y += neu::g_time.deltaTime * 60.0f;
+			//actor2->m_transform.rotation.y += neu::g_time.deltaTime * 60.0f;
 		}
-		
+
 		auto material = neu::g_resources.Get<neu::Material>("Materials/Multi.mtrl");
 		if (material)
 		{

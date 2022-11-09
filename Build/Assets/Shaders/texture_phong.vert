@@ -7,7 +7,7 @@ in layout(location = 2) vec3 vnormal;
 out vec3 position;
 out vec3 normal;
 out vec2 texcoord;
-
+ 
 uniform mat4 model;
 uniform mat4 view;
 uniform mat4 projection;

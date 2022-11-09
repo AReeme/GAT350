@@ -46,7 +46,15 @@ namespace neu
 
             vertex.position = { mesh->mVertices[i].x, mesh->mVertices[i].y, mesh->mVertices[i].z };
             vertex.normal = { mesh->mNormals[i].x, mesh->mNormals[i].y, mesh->mNormals[i].z };
-            vertex.tangent = { mesh->mTangents[i].x, mesh->mTangents[i].y, mesh->mTangents[i].z };
+
+            if (mesh->mTangents)
+            {
+                vertex.tangent = { mesh->mTangents[i].x, mesh->mTangents[i].y, mesh->mTangents[i].z };
+            }
+            else
+            {
+                vertex.tangent = { 0, 0, 0 };
+            }
 
             if (mesh->mTextureCoords[0])
             {
