@@ -6,8 +6,8 @@
       "transform": {
         "position": [
           0,
-          0,
-          0
+          -3,
+          10
         ],
         "scale": [
           1,
@@ -23,8 +23,8 @@
       "components": [
         {
           "type": "ModelComponent",
-          "model_name": "Models/ogre.obj",
-          "material_name": "Materials/Box.mtrl"
+          "model_name": "Models/squirrel.glb",
+          "material_name": "Materials/squirrel.mtrl"
         }
       ]
     },
@@ -51,7 +51,7 @@
             1.0,
             1.0
           ],
-          "type_name": "spot",
+          "type_name": "directional",
           "cutoff": 45.0,
           "exponent": 50.0
         }
