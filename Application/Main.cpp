@@ -44,7 +44,7 @@ int main(int argc, char** argv)
 
 		ImGui::Begin("Hello!");
 		ImGui::Button("Press Me!");
-		ImGui::SliderFloat3("Position", &pos[0], -20.0f, 20.0f);
+		ImGui::SliderFloat3("Position", &pos[0], -15.0f, 15.0f);
 		ImGui::End();
 
 		scene->Update();
