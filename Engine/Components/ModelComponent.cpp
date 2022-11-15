@@ -13,6 +13,8 @@ namespace neu
 		// set model view projection matrix for model 
 		material->GetProgram() -> SetUniform("model", (glm::mat4)m_owner->m_transform);
 
+		glDepthMask(depth_test);
+
 		model->m_vertexBuffer.Draw();
 	}
 
@@ -34,6 +36,8 @@ namespace neu
 		READ_DATA(value, material_name);
 		// get material from material name 
 		material = g_resources.Get<neu::Material>(material_name);
+
+		READ_DATA(value, depth_test);
 
 		return true;
 	}
