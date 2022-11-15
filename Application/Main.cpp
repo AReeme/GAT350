@@ -17,7 +17,7 @@ int main(int argc, char** argv)
 	neu::g_gui.Initialize(neu::g_renderer);
 
 	// load scene 
-	auto scene = neu::g_resources.Get<neu::Scene>("scenes/texture.scn");
+	auto scene = neu::g_resources.Get<neu::Scene>("scenes/cubemap.scn");
 
 	glm::vec3 pos = {0,0,0};
 
@@ -38,7 +38,7 @@ int main(int argc, char** argv)
 		auto actor2 = scene->GetActorFromName("Ogre");
 		if (actor2)
 		{
-			actor2->m_transform.rotation.y += neu::g_time.deltaTime * 60.0f;
+			//actor2->m_transform.rotation.y += neu::g_time.deltaTime * 60.0f;
 		}
 		auto actor3 = scene->GetActorFromName("Light2");
 		auto actor4 = scene->GetActorFromName("Light3");

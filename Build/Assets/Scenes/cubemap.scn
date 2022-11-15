@@ -4,29 +4,12 @@
   "actors": [
     {
       "type": "Actor",
-      "name": "Ogre",
-      "transform": {
-        "position": [
-          0,
-          -1,
-          0
-        ],
-        "scale": [
-          0.25,
-          0.25,
-          0.25
-        ],
-        "rotation": [
-          0,
-          180,
-          0
-        ]
-      },
+      "name": "Skybox",
       "components": [
         {
           "type": "ModelComponent",
-          "model_name": "Models/squirrel.glb",
-          "material_name": "Materials/squirrel.mtrl"
+          "model_name": "Models/cube.obj",
+          "material_name": "Materials/Skybox.mtrl"
         }
       ]
     },

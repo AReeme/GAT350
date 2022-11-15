@@ -20,14 +20,11 @@ namespace neu
         // va_start - enables access to variadic function arguments 
         va_start(args, filename);
 
-        // va_arg - accesses the next variadic function arguments 
-        Renderer& renderer = va_arg(args, Renderer);
-
         // va_end - ends traversal of the variadic function arguments 
         va_end(args);
 
         // create texture (returns true/false if successful) 
-        return Load(filename, renderer);
+        return Load(filename);
     }
 
     bool Texture::CreateFromSurface(SDL_Surface* surface, Renderer& renderer)
@@ -35,7 +32,7 @@ namespace neu
         return true;
     }
 
-    bool Texture::Load(const std::string& filename, Renderer& renderer)
+    bool Texture::Load(const std::string& filename)
     {
         // load surface 
         // !! call IMG_Load with c-string of filename 
@@ -69,6 +66,32 @@ namespace neu
     neu::Vector2 Texture::GetSize() const
     {
         return Vector2{ 0, 0 };
+    }
+
+    GLenum Texture::GetInternalFormat(GLuint format)
+    {
+        GLenum internalFormat = SDL_PIXELFORMAT_UNKNOWN;
+        switch (format)
+        {
+        case SDL_PIXELFORMAT_RGB888:
+        case SDL_PIXELFORMAT_RGB24:
+            internalFormat = GL_RGB;
+            break;
+        case SDL_PIXELFORMAT_BGR888:
+        case SDL_PIXELFORMAT_BGR24:
+            internalFormat = GL_BGR;
+            break;
+        case SDL_PIXELFORMAT_RGBA8888:
+        case SDL_PIXELFORMAT_RGBA32:
+            internalFormat = GL_RGBA;
+            break;
+        case SDL_PIXELFORMAT_BGRA8888:
+        case SDL_PIXELFORMAT_BGRA32:
+            internalFormat = GL_BGRA;
+            break;
+        }
+
+        return internalFormat;
     }
 
     void Texture::FlipSurface(SDL_Surface* surface)

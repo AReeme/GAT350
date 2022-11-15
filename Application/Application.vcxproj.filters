@@ -140,6 +140,21 @@
     <None Include="..\Build\Assets\Shaders\FX\toon.vert">
       <Filter>Assets\Shaders\FX</Filter>
     </None>
+    <None Include="..\Build\Assets\Scenes\cubemap.scn">
+      <Filter>Assets\Scenes</Filter>
+    </None>
+    <None Include="..\Build\Assets\Materials\Skybox.mtrl">
+      <Filter>Assets\Materials</Filter>
+    </None>
+    <None Include="..\Build\Assets\Shaders\FX\skybox.frag">
+      <Filter>Assets\Shaders\FX</Filter>
+    </None>
+    <None Include="..\Build\Assets\Shaders\FX\skybox.prog">
+      <Filter>Assets\Shaders\FX</Filter>
+    </None>
+    <None Include="..\Build\Assets\Shaders\FX\skybox.vert">
+      <Filter>Assets\Shaders\FX</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Main.h">
