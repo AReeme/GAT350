@@ -35,18 +35,18 @@ int main(int argc, char** argv)
 			// move light using sin wave 
 			actor->m_transform.position = pos;
 		}
-		auto actor3 = scene->GetActorFromName("Light2");
-		auto actor4 = scene->GetActorFromName("Light3");
-
 		auto actor2 = scene->GetActorFromName("Ogre");
 		if (actor2)
 		{
-			//actor2->m_transform.rotation.y += neu::g_time.deltaTime * 60.0f;
+			actor2->m_transform.rotation.y += neu::g_time.deltaTime * 60.0f;
 		}
+		auto actor3 = scene->GetActorFromName("Light2");
+		auto actor4 = scene->GetActorFromName("Light3");
+
 
 		ImGui::Begin("Hello!");
 		ImGui::Button("Press Me!");
-		ImGui::SliderFloat3("Position", &pos[0], -15.0f, 15.0f);
+		ImGui::SliderFloat3("Position", &pos[0], -5.0f, 5.0f);
 		ImGui::End();
 
 		scene->Update();
