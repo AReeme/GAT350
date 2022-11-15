@@ -35,6 +35,8 @@ int main(int argc, char** argv)
 			// move light using sin wave 
 			actor->m_transform.position = pos;
 		}
+		auto actor3 = scene->GetActorFromName("Light2");
+		auto actor4 = scene->GetActorFromName("Light3");
 
 		auto actor2 = scene->GetActorFromName("Ogre");
 		if (actor2)
@@ -51,7 +53,8 @@ int main(int argc, char** argv)
 
 		neu::g_renderer.BeginFrame();
 
-		scene->Draw(neu::g_renderer);
+		scene->PreRender(neu::g_renderer);
+		scene->Render(neu::g_renderer);
 		neu::g_gui.Draw();
 
 		neu::g_renderer.EndFrame();

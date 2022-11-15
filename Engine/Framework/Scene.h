@@ -1,6 +1,7 @@
 #pragma once
 #include "Actor.h"
 #include "Resource/Resource.h"
+#include "Renderer/Renderer.h"
 #include <list>
 #include <memory>
 
@@ -25,7 +26,8 @@ namespace neu
 
 		void Initialize() override;
 		void Update() override;
-		void Draw(Renderer& renderer);
+		void PreRender(Renderer& renderer);
+		void Render(Renderer& renderer);
 
 		virtual bool Write(const rapidjson::Value& value) const override;
 		virtual bool Read(const rapidjson::Value& value) override;
