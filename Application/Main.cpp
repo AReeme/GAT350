@@ -19,7 +19,7 @@ int main(int argc, char** argv)
 	// load scene 
 	auto scene = neu::g_resources.Get<neu::Scene>("scenes/cubemap.scn");
 
-	glm::vec3 pos = {0,0,0};
+	glm::vec3 rot = {0,0,0};
 
 	bool quit = false;
 	while (!quit)
@@ -33,20 +33,21 @@ int main(int argc, char** argv)
 		if (actor)
 		{
 			// move light using sin wave 
-			actor->m_transform.position = pos;
+			actor->m_transform.position = rot;
 		}
 		auto actor2 = scene->GetActorFromName("Ogre");
 		if (actor2)
 		{
-			//actor2->m_transform.rotation.y += neu::g_time.deltaTime * 60.0f;
+			actor2->m_transform.rotation = math::EulerToQuaternion(rot);
 		}
+
 		auto actor3 = scene->GetActorFromName("Light2");
 		auto actor4 = scene->GetActorFromName("Light3");
 
 
 		ImGui::Begin("Hello!");
 		ImGui::Button("Press Me!");
-		ImGui::SliderFloat3("Position", &pos[0], -5.0f, 5.0f);
+		ImGui::SliderFloat3("Position", &rot[0], -360.0f, 360.0f);
 		ImGui::End();
 
 		scene->Update();

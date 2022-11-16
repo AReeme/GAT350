@@ -10,7 +10,36 @@
           "type": "ModelComponent",
           "model_name": "Models/cube.obj",
           "material_name": "Materials/Skybox.mtrl",
-          "depth_test":  false
+          "depth_test": false
+        }
+      ]
+    },
+    {
+      "type": "Actor",
+      "name": "Ogre",
+      "transform": {
+        "position": [
+          0,
+          -1,
+          -5
+        ],
+        "scale": [
+          0.25,
+          0.25,
+          0.25
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ]
+      },
+      "components": [
+        {
+          "type": "ModelComponent",
+          "model_name": "Models/squirrel.glb",
+          "material_name": "Materials/squirrel.mtrl",
+          "depth_test": true
         }
       ]
     },
