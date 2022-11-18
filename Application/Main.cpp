@@ -20,7 +20,7 @@ int main(int argc, char** argv)
 	auto scene = neu::g_resources.Get<neu::Scene>("scenes/cubemap.scn");
 
 	glm::vec3 rot = {0,0,0};
-
+	float ri = 1;
 	bool quit = false;
 	while (!quit)
 	{
@@ -44,10 +44,16 @@ int main(int argc, char** argv)
 		auto actor3 = scene->GetActorFromName("Light2");
 		auto actor4 = scene->GetActorFromName("Light3");
 
+		auto program = neu::g_resources.Get<neu::Program>("shaders/fx/refraction.prog");
+		if (program)
+		{
+			program->Use();
+			program->SetUniform("ri", &ri);
+		}
 
 		ImGui::Begin("Hello!");
-		ImGui::Button("Press Me!");
-		ImGui::SliderFloat3("Position", &rot[0], -360.0f, 360.0f);
+		ImGui::DragFloat3("Rotation", &rot[0]);
+		ImGui::DragFloat("Refraction Index", &ri, 0.01f, 1, 3);
 		ImGui::End();
 
 		scene->Update();

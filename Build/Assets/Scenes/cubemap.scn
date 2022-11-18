@@ -21,7 +21,7 @@
         "position": [
           0,
           -1,
-          -5
+          -6
         ],
         "scale": [
           0.25,
@@ -38,7 +38,7 @@
         {
           "type": "ModelComponent",
           "model_name": "Models/squirrel.glb",
-          "material_name": "Materials/squirrel.mtrl",
+          "material_name": "Materials/refraction.mtrl",
           "depth_test": true
         }
       ]

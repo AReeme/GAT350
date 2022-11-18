@@ -1,0 +1,4 @@
+{
+	"vertex_shader": "shaders/FX/refraction.vert",
+	"fragment_shader": "shaders/FX/refraction.frag"
+}
