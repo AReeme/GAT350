@@ -149,12 +149,14 @@
     <None Include="..\Build\Assets\Materials\Multi.mtrl" />
     <None Include="..\Build\Assets\Materials\Reflection.mtrl" />
     <None Include="..\Build\Assets\Materials\refraction.mtrl" />
+    <None Include="..\Build\Assets\Materials\rtt.mtrl" />
     <None Include="..\Build\Assets\Materials\Skybox.mtrl" />
     <None Include="..\Build\Assets\Materials\Squirrel.mtrl" />
     <None Include="..\Build\Assets\Materials\Tree.mtrl" />
     <None Include="..\Build\Assets\Scenes\basic.scn" />
     <None Include="..\Build\Assets\Scenes\basic_lit.scn" />
     <None Include="..\Build\Assets\Scenes\cubemap.scn" />
+    <None Include="..\Build\Assets\Scenes\rtt.scn" />
     <None Include="..\Build\Assets\Scenes\texture.scn" />
     <None Include="..\Build\Assets\Shaders\basic.frag" />
     <None Include="..\Build\Assets\Shaders\basic.prog" />

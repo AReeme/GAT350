@@ -16,8 +16,17 @@ int main(int argc, char** argv)
 	LOG("Window Created...");
 	neu::g_gui.Initialize(neu::g_renderer);
 
+	// create framebuffer texture
+	auto texture = std::make_shared<neu::Texture>();
+	texture->CreateTexture(512, 512);
+	neu::g_resources.Add<neu::Texture>("fb_texture", texture);
+
+	// create framebuffer
+	auto framebuffer = neu::g_resources.Get<neu::Framebuffer>("framebuffer", "fb_texture");
+	framebuffer->Unbind();
+
 	// load scene 
-	auto scene = neu::g_resources.Get<neu::Scene>("scenes/cubemap.scn");
+	auto scene = neu::g_resources.Get<neu::Scene>("scenes/rtt.scn");
 
 	glm::vec3 rot = {0,0,0};
 	float interpolation = 0;
@@ -61,10 +70,36 @@ int main(int argc, char** argv)
 
 		scene->Update();
 
-		neu::g_renderer.BeginFrame();
+		{
+			auto actor = scene->GetActorFromName("RTT");
+			if (actor)
+			{
+				actor->SetActive(false);
+			}
+		}
 
+		// render pass 1 (render to framebuffer)
+		glViewport(0, 0, 512, 512);
+		framebuffer->Bind();
+		neu::g_renderer.BeginFrame();
 		scene->PreRender(neu::g_renderer);
 		scene->Render(neu::g_renderer);
+		framebuffer->Unbind();
+
+		{
+			auto actor = scene->GetActorFromName("RTT");
+			if (actor)
+			{
+				actor->SetActive(true);
+			}
+		}
+
+		// render pass 2 (render to screen)
+		glViewport(0, 0, 800, 600);
+		neu::g_renderer.BeginFrame();
+		scene->PreRender(neu::g_renderer);
+		scene->Render(neu::g_renderer);
+
 		neu::g_gui.Draw();
 
 		neu::g_renderer.EndFrame();
