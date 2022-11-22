@@ -20,7 +20,8 @@ int main(int argc, char** argv)
 	auto scene = neu::g_resources.Get<neu::Scene>("scenes/cubemap.scn");
 
 	glm::vec3 rot = {0,0,0};
-	float ri = 1;
+	float interpolation = 0;
+	float ri = 1.4;
 	bool quit = false;
 	while (!quit)
 	{
@@ -44,16 +45,18 @@ int main(int argc, char** argv)
 		auto actor3 = scene->GetActorFromName("Light2");
 		auto actor4 = scene->GetActorFromName("Light3");
 
-		auto program = neu::g_resources.Get<neu::Program>("shaders/fx/refraction.prog");
+		auto program = neu::g_resources.Get<neu::Program>("shaders/fx/reflect_refract.prog");
 		if (program)
 		{
 			program->Use();
-			program->SetUniform("ri", &ri);
+			program->SetUniform("interpolation", interpolation);
+			program->SetUniform("ri", ri);
 		}
 
 		ImGui::Begin("Hello!");
 		ImGui::DragFloat3("Rotation", &rot[0]);
-		ImGui::DragFloat("Refraction Index", &ri, 0.01f, 1, 3);
+		ImGui::SliderFloat("ri", &ri, 1, 3);
+		ImGui::SliderFloat("interpolation", &interpolation, 0, 1);
 		ImGui::End();
 
 		scene->Update();

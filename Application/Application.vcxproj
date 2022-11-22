@@ -168,6 +168,9 @@
     <None Include="..\Build\Assets\Shaders\FX\reflection.frag" />
     <None Include="..\Build\Assets\Shaders\FX\reflection.prog" />
     <None Include="..\Build\Assets\Shaders\FX\reflection.vert" />
+    <None Include="..\Build\Assets\Shaders\FX\reflect_refract.frag" />
+    <None Include="..\Build\Assets\Shaders\FX\reflect_refract.prog" />
+    <None Include="..\Build\Assets\Shaders\FX\reflect_refract.vert" />
     <None Include="..\Build\Assets\Shaders\FX\refraction.frag" />
     <None Include="..\Build\Assets\Shaders\FX\refraction.prog" />
     <None Include="..\Build\Assets\Shaders\FX\refraction.vert" />

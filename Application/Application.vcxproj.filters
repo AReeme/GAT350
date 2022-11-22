@@ -179,6 +179,15 @@
     <None Include="..\Build\Assets\Materials\refraction.mtrl">
       <Filter>Assets\Materials</Filter>
     </None>
+    <None Include="..\Build\Assets\Shaders\FX\reflect_refract.frag">
+      <Filter>Assets\Shaders\FX</Filter>
+    </None>
+    <None Include="..\Build\Assets\Shaders\FX\reflect_refract.prog">
+      <Filter>Assets\Shaders\FX</Filter>
+    </None>
+    <None Include="..\Build\Assets\Shaders\FX\reflect_refract.vert">
+      <Filter>Assets\Shaders\FX</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Main.h">

@@ -1,5 +1,5 @@
 {
-  "program": "shaders/FX/refraction.prog",
+  "program": "shaders/FX/reflect_refract.prog",
   "cubemap": "textures/Yokohama3/",
   "cubemap_extension":  ".jpg",
   "color": [
