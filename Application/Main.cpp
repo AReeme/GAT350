@@ -78,8 +78,8 @@ int main(int argc, char** argv)
 			}
 		}
 
-		// render pass 1 (render to framebuffer)
-		glViewport(0, 0, 512, 512);
+		// render pass 1 (render to framebuffer) 
+		neu::g_renderer.SetViewport(0, 0, framebuffer->GetSize().x, framebuffer->GetSize().y);
 		framebuffer->Bind();
 		neu::g_renderer.BeginFrame();
 		scene->PreRender(neu::g_renderer);
@@ -94,8 +94,8 @@ int main(int argc, char** argv)
 			}
 		}
 
-		// render pass 2 (render to screen)
-		glViewport(0, 0, 800, 600);
+		// render pass 2 (render to screen) 
+		neu::g_renderer.RestoreViewport();
 		neu::g_renderer.BeginFrame();
 		scene->PreRender(neu::g_renderer);
 		scene->Render(neu::g_renderer);
