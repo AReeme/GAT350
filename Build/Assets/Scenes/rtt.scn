@@ -69,6 +69,29 @@
     },
     {
       "type": "Actor",
+      "name": "PostProcess",
+      "transform": {
+        "position": [
+          3,
+          2,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "components": [
+        {
+          "type": "ModelComponent",
+          "model_name": "Models/quad.obj",
+          "material_name": "Materials/postprocess.mtrl"
+        }
+      ]
+    },
+    {
+      "type": "Actor",
       "name": "Light",
       "transform": {
         "position": [

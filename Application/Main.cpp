@@ -2,6 +2,8 @@
 #include <iostream> 
 #include <Renderer/Program.cpp>
 
+#define POST_PROCESS 
+
 int main(int argc, char** argv)
 {
 	LOG("Application Started...");
@@ -18,7 +20,7 @@ int main(int argc, char** argv)
 
 	// create framebuffer texture
 	auto texture = std::make_shared<neu::Texture>();
-	texture->CreateTexture(512, 512);
+	texture->CreateTexture(1024, 1024);
 	neu::g_resources.Add<neu::Texture>("fb_texture", texture);
 
 	// create framebuffer
@@ -62,6 +64,13 @@ int main(int argc, char** argv)
 			program->SetUniform("ri", ri);
 		}
 
+		/*auto program1 = neu::g_resources.Get<neu::Program>("shaders/postprocess/postprocess.prog");
+		if (program1)
+		{
+			program1->Use();
+			program1->SetUniform("offset", neu::g_time.time);
+		}*/
+
 		ImGui::Begin("Hello!");
 		ImGui::DragFloat3("Rotation", &rot[0]);
 		ImGui::SliderFloat("ri", &ri, 1, 3);
@@ -70,35 +79,42 @@ int main(int argc, char** argv)
 
 		scene->Update();
 
+#ifdef POST_PROCESS 
+		// don't draw post process actor when rendering to the framebuffer 
 		{
-			auto actor = scene->GetActorFromName("RTT");
+			auto actor = scene->GetActorFromName("PostProcess");
 			if (actor)
 			{
 				actor->SetActive(false);
 			}
 		}
-
-		// render pass 1 (render to framebuffer) 
-		neu::g_renderer.SetViewport(0, 0, framebuffer->GetSize().x, framebuffer->GetSize().y);
+		// render pass 1 (render scene to framebuffer) 
+		neu::g_renderer.SetViewport(0, 0, framebuffer -> GetSize().x, framebuffer->GetSize().y);
 		framebuffer->Bind();
 		neu::g_renderer.BeginFrame();
 		scene->PreRender(neu::g_renderer);
 		scene->Render(neu::g_renderer);
 		framebuffer->Unbind();
 
-		{
-			auto actor = scene->GetActorFromName("RTT");
-			if (actor)
-			{
-				actor->SetActive(true);
-			}
-		}
-
 		// render pass 2 (render to screen) 
 		neu::g_renderer.RestoreViewport();
 		neu::g_renderer.BeginFrame();
 		scene->PreRender(neu::g_renderer);
+
+		// draw only the post process actor to the screen 
+		{
+			auto actor = scene->GetActorFromName("PostProcess");
+			if (actor)
+			{
+				actor->SetActive(true);
+				actor->Draw(neu::g_renderer);
+			}
+		}
+#else 
+		neu::g_renderer.BeginFrame();
+		scene->PreRender(neu::g_renderer);
 		scene->Render(neu::g_renderer);
+#endif // POST_PROCESS 
 
 		neu::g_gui.Draw();
 
