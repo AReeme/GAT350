@@ -45,6 +45,35 @@
     },
     {
       "type": "Actor",
+      "name": "Helicopter",
+      "transform": {
+        "position": [
+          1,
+          5,
+          -8
+        ],
+        "scale": [
+          0.003,
+          0.003,
+          0.003
+        ],
+        "rotation": [
+          30,
+          0,
+          0
+        ]
+      },
+      "components": [
+        {
+          "type": "ModelComponent",
+          "model_name": "Models/Helicopter.glb",
+          "material_name": "Materials/Squirrel.mtrl",
+          "depth_test": true
+        }
+      ]
+    },
+    {
+      "type": "Actor",
       "name": "Dog",
       "transform": {
         "position": [
@@ -67,7 +96,7 @@
         {
           "type": "ModelComponent",
           "model_name": "Models/Schnauzer.glb",
-          "material_name": "Materials/box.mtrl"
+          "material_name": "Materials/Dog.mtrl"
         }
       ]
     },
@@ -113,9 +142,9 @@
         {
           "type": "LightComponent",
           "color": [
+            0,
             1.0,
-            1.0,
-            1.0
+            0
           ],
           "type_name": "directional",
           "cutoff": 20.0,
@@ -137,8 +166,8 @@
         {
           "type": "LightComponent",
           "color": [
-            1,
-            1,
+            0,
+            0,
             1
           ],
           "type_name": "point",
@@ -162,8 +191,8 @@
           "type": "LightComponent",
           "color": [
             1,
-            1,
-            1
+            0,
+            0
           ],
           "type_name": "point",
           "cutoff": 25.0,

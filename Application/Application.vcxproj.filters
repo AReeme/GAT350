@@ -215,7 +215,10 @@
     <None Include="..\Build\Assets\Materials\Final_SkyBox.mtrl">
       <Filter>Assets\Materials</Filter>
     </None>
-    <None Include="..\Build\Assets\Materials\Apple_Tree.mtrl">
+    <None Include="..\Build\Assets\Materials\Copter.mtrl">
+      <Filter>Assets\Materials</Filter>
+    </None>
+    <None Include="..\Build\Assets\Materials\Dog.mtrl">
       <Filter>Assets\Materials</Filter>
     </None>
   </ItemGroup>

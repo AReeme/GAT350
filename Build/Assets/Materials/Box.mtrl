@@ -1,7 +1,7 @@
 {
   "program": "shaders/Lit/texture.prog",
   "textures": [
-    "textures/dog.png"
+    "textures/Copter.png"
   ],
   "color": [
     1,

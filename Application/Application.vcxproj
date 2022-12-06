@@ -143,9 +143,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\Build\Assets\Materials\Apple_Tree.mtrl" />
+    <None Include="..\Build\Assets\Materials\Copter.mtrl" />
     <None Include="..\Build\Assets\Materials\Background.mtrl" />
     <None Include="..\Build\Assets\Materials\Box.mtrl" />
+    <None Include="..\Build\Assets\Materials\Dog.mtrl" />
     <None Include="..\Build\Assets\Materials\Final_SkyBox.mtrl" />
     <None Include="..\Build\Assets\Materials\Floor.mtrl" />
     <None Include="..\Build\Assets\Materials\Multi.mtrl" />

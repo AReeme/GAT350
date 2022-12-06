@@ -1,0 +1,12 @@
+{
+  "program": "shaders/Lit/texture.prog",
+  "textures": [
+    "textures/dog.png"
+  ],
+  "color": [
+    1,
+    1,
+    1
+  ],
+  "shininess": 256
+} 

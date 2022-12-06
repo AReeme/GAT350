@@ -1,8 +1,7 @@
 {
   "program": "shaders/Lit/texture_normal.prog",
   "textures": [
-    "textures/texture_diffuse.png",
-    "textures/texture_normal.png"
+    "textures/Copter.png"
   ],
   "color": [
     1,

@@ -53,13 +53,14 @@ int main(int argc, char** argv)
 			actor2->m_transform.rotation = math::EulerToQuaternion(rot);
 		}
 
+		auto actor6 = scene->GetActorFromName("Helicopter");
+
 		auto actor5 = scene->GetActorFromName("Dog");
 		if (actor5)
 		{
 			actor5->m_transform.rotation = math::EulerToQuaternion(rot);
 		}
 
-		auto actor6 = scene->GetActorFromName("Tree");
 
 		auto actor3 = scene->GetActorFromName("Light2");
 		auto actor4 = scene->GetActorFromName("Light3");
