@@ -1,8 +1,7 @@
 {
   "program": "shaders/Lit/texture.prog",
   "textures": [
-    "textures/ogre_diffuse.bmp",
-    "textures/ogre_normal.bmp"
+    "textures/dog.png"
   ],
   "color": [
     1,

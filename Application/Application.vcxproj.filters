@@ -209,6 +209,15 @@
     <None Include="..\Build\Assets\Materials\postprocess.mtrl">
       <Filter>Assets\Materials</Filter>
     </None>
+    <None Include="..\Build\Assets\Scenes\final.scn">
+      <Filter>Assets\Scenes</Filter>
+    </None>
+    <None Include="..\Build\Assets\Materials\Final_SkyBox.mtrl">
+      <Filter>Assets\Materials</Filter>
+    </None>
+    <None Include="..\Build\Assets\Materials\Apple_Tree.mtrl">
+      <Filter>Assets\Materials</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Main.h">

@@ -28,7 +28,7 @@ int main(int argc, char** argv)
 	framebuffer->Unbind();
 
 	// load scene 
-	auto scene = neu::g_resources.Get<neu::Scene>("scenes/rtt.scn");
+	auto scene = neu::g_resources.Get<neu::Scene>("scenes/final.scn");
 
 	glm::vec3 rot = {0,0,0};
 	float interpolation = 0;
@@ -52,6 +52,14 @@ int main(int argc, char** argv)
 		{
 			actor2->m_transform.rotation = math::EulerToQuaternion(rot);
 		}
+
+		auto actor5 = scene->GetActorFromName("Dog");
+		if (actor5)
+		{
+			actor5->m_transform.rotation = math::EulerToQuaternion(rot);
+		}
+
+		auto actor6 = scene->GetActorFromName("Tree");
 
 		auto actor3 = scene->GetActorFromName("Light2");
 		auto actor4 = scene->GetActorFromName("Light3");

@@ -143,8 +143,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\Build\Assets\Materials\Apple_Tree.mtrl" />
     <None Include="..\Build\Assets\Materials\Background.mtrl" />
     <None Include="..\Build\Assets\Materials\Box.mtrl" />
+    <None Include="..\Build\Assets\Materials\Final_SkyBox.mtrl" />
     <None Include="..\Build\Assets\Materials\Floor.mtrl" />
     <None Include="..\Build\Assets\Materials\Multi.mtrl" />
     <None Include="..\Build\Assets\Materials\postprocess.mtrl" />
@@ -157,6 +159,7 @@
     <None Include="..\Build\Assets\Scenes\basic.scn" />
     <None Include="..\Build\Assets\Scenes\basic_lit.scn" />
     <None Include="..\Build\Assets\Scenes\cubemap.scn" />
+    <None Include="..\Build\Assets\Scenes\final.scn" />
     <None Include="..\Build\Assets\Scenes\rtt.scn" />
     <None Include="..\Build\Assets\Scenes\texture.scn" />
     <None Include="..\Build\Assets\Shaders\basic.frag" />

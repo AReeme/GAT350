@@ -14,15 +14,15 @@ uniform mat4 projection;
  
 void main()
 {
-	// create model view matrix
-	mat4 model_view = view * model;
-	// transform normals to view space
-	normal = normalize(mat3(model_view) * vnormal);
-	// transform positions to view space
-	position = vec3(model_view * vec4(vposition, 1));
-	// pass-through texcoord
-	texcoord = vtexcoord;
+    // create model view matrix
+    mat4 model_view = view * model;
+    // transform normals to view space
+    normal = normalize(mat3(model_view) * vnormal);
+    // transform positions to view space
+    position = vec3(model_view * vec4(vposition, 1));
+    // pass-through texcoord
+    texcoord = vtexcoord;
  
-	mat4 mvp = projection * view * model;
-	gl_Position = mvp * vec4(vposition, 1.0);
+    mat4 mvp = projection * view * model;
+    gl_Position = mvp * vec4(vposition, 1.0);
 }

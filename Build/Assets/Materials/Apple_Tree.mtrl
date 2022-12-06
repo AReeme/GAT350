@@ -1,0 +1,13 @@
+{
+  "program": "shaders/Lit/texture.prog",
+  "textures": [
+    "textures/Apple_Tree.png",
+    "textures/Apple_Tree_Normal.png"
+  ],
+  "color": [
+    1,
+    1,
+    1
+  ],
+  "shininess": 256
+} 
